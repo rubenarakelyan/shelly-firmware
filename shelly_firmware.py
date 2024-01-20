@@ -19,6 +19,8 @@ flash_size = 2097152
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
 
+sh = sh.bake(_return_cmd=True)
+
 tool_mkspiffs = sh.Command('./tools/mkspiffs8')
 tool_unspiffs = sh.Command('./tools/unspiffs8')
 
